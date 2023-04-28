@@ -16,10 +16,14 @@ public class SchemaService {
     private final SchemaRepository schemaRepository;
 
     public <S extends Schema> S save(S entity) {
-        return schemaRepository.save(entity);
+        return this.schemaRepository.save(entity);
     }
 
     public Page<Schema> findAll(Pageable pageable) {
-        return schemaRepository.findAll(pageable);
+        return this.schemaRepository.findAll(pageable);
+    }
+
+    public Page<Schema> findByNameLike(String name, Pageable pageable) {
+        return this.schemaRepository.findByNameLike(name, pageable);
     }
 }

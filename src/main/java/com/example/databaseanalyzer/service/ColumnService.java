@@ -16,10 +16,14 @@ public class ColumnService {
     private final ColumnRepository columnRepository;
 
     public <S extends Column> S save(S entity) {
-        return columnRepository.save(entity);
+        return this.columnRepository.save(entity);
     }
 
     public Page<Column> findAll(Pageable pageable) {
-        return columnRepository.findAll(pageable);
+        return this.columnRepository.findAll(pageable);
+    }
+
+    public Page<Column> findByNameLike(String name, Pageable pageable) {
+        return this.columnRepository.findByNameLike(name, pageable);
     }
 }

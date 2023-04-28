@@ -1,7 +1,6 @@
 package com.example.databaseanalyzer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -16,7 +15,6 @@ public class Column {
     @Id
     private UUID id;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String name;
 
     private String type;

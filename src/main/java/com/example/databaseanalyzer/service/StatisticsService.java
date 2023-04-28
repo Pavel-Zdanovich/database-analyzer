@@ -16,11 +16,14 @@ public class StatisticsService {
     private final StatisticsRepository statisticsRepository;
 
     public <S extends Statistics> S save(S entity) {
-        return statisticsRepository.save(entity);
+        return this.statisticsRepository.save(entity);
     }
 
     public Page<Statistics> findAll(Pageable pageable) {
-        return statisticsRepository.findAll(pageable);
+        return this.statisticsRepository.findAll(pageable);
     }
 
+    public Page<Statistics> findByNameLike(String name, Pageable pageable) {
+        return this.statisticsRepository.findByNameLike(name, pageable);
+    }
 }

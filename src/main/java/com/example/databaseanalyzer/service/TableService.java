@@ -16,10 +16,14 @@ public class TableService {
     private final TableRepository tableRepository;
 
     public <S extends Table> S save(S entity) {
-        return tableRepository.save(entity);
+        return this.tableRepository.save(entity);
     }
 
     public Page<Table> findAll(Pageable pageable) {
-        return tableRepository.findAll(pageable);
+        return this.tableRepository.findAll(pageable);
+    }
+
+    public Page<Table> findByNameLike(String name, Pageable pageable) {
+        return this.tableRepository.findByNameLike(name, pageable);
     }
 }

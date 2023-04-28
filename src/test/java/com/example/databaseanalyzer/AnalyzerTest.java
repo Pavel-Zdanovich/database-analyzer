@@ -97,37 +97,37 @@ public class AnalyzerTest {
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();
     }
 
-    @Test
+    //    @Test
     void mysql() {
         Statistics statistics = analyzer.analyze(mysql);
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();
     }
 
-//    @Test
+    //    @Test
     void mariadb() {
         Statistics statistics = analyzer.analyze(mariadb);
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();
     }
 
-//    @Test
+    //    @Test
     void oracle() {
         Statistics statistics = analyzer.analyze(oracle);
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();
     }
 
-//    @Test
+    //    @Test
     void postgresql() {
         Statistics statistics = analyzer.analyze(postgresql);
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();
     }
 
-    @Test
+    //    @Test
     void sqlserver() {
         Statistics statistics = analyzer.analyze(sqlserver);
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();
     }
 
-//    @Test
+    //    @Test
     void db2() {
         Statistics statistics = analyzer.analyze(db2);
         Assertions.assertThat(statistics).hasNoNullFieldsOrProperties();

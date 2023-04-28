@@ -16,10 +16,14 @@ public class DatabaseService {
     private final DatabaseRepository databaseRepository;
 
     public <S extends Database> S save(S entity) {
-        return databaseRepository.save(entity);
+        return this.databaseRepository.save(entity);
     }
 
     public Page<Database> findAll(Pageable pageable) {
-        return databaseRepository.findAll(pageable);
+        return this.databaseRepository.findAll(pageable);
+    }
+
+    public Page<Database> findByNameLike(String name, Pageable pageable) {
+        return this.databaseRepository.findByNameLike(name, pageable);
     }
 }
