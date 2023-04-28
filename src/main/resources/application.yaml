@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: database-analyzer
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username:
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.globally_quoted_identifiers: true
+      hibernate.globally_quoted_identifiers_skip_column_definitions: true
+  mvc:
+    problemdetails:
+      enabled: true
+springdoc:
+  default-produces-media-type: application/json
